@@ -27,6 +27,7 @@ Và nhập data, được kết quả.
 
 Câu 1: 
 ```SQL
+--1. Cho biết mã của các giáo viên có họ tên bắt đầu là “Nguyễn” và lương trên $2000 
 (select MAGV
 from GIAOVIEN 
 where LUONG > 2000 and HOTEN like N'Nguyễn%')
