@@ -7,6 +7,17 @@ Sau khi tạo bảng (code SQL), ta có kết quả bảng
 
 Và nhập data, được kết quả. 
 
+<p align="center"> <img src="img/CV.png" width=""> </p>
+<p align="center"> <img src="img/BM.png" width=""> </p>
+<p align="center"> <img src="img/Chude.png" width=""> </p>
+<p align="center"> <img src="img/khoa.png" width=""> </p>
+<p align="center"> <img src="img/thamgia.png" width=""> </p>
+<p align="center"> <img src="img/ngthan.png" width=""> </p>
+<p align="center"> <img src="img/gv_dt.png" width=""> </p>
+
+
+
+
 
 
 
