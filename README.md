@@ -40,6 +40,7 @@ where year(bm.NGAYNHANCHUC)> 1995 )
 
 Câu 2:
 ```SQL
+--2: Với mỗi giáo viên, hãy cho biết thông tin của bộ môn mà họ đang làm việc.
 SELECT  gv.HOTEN, bm.* 
 from GIAOVIEN gv left join BOMON bm on gv.MABM = bm.MABM
 ```
@@ -47,6 +48,7 @@ from GIAOVIEN gv left join BOMON bm on gv.MABM = bm.MABM
 
 Câu 3:
 ```SQL
+--3. Cho biết tên giáo viên lớn tuổi nhất của bộ môn Hệ thống thông tin.
 SELECT HOTEN
   FROM GIAOVIEN GV, BOMON BM
   WHERE BM.TENBM = N'Hệ thống thông tin' AND GV.MABM = BM.MABM
@@ -58,6 +60,7 @@ SELECT HOTEN
 
 Câu 4:
 ```SQL
+--4. Cho biết họ tên giáo viên chủ nhiệm nhiều đề tài nhất
 SELECT HOTEN
   FROM GIAOVIEN GV
   WHERE GV.MAGV IN (SELECT GV1.MAGV
@@ -75,6 +78,7 @@ SELECT HOTEN
 
 Câu 5:
 ```SQL
+--5. Cho biết tên giáo viên và tên bộ môn của giáo viên tham gia nhiều đề tài nhất.
 SELECT HOTEN, TENBM
   FROM GIAOVIEN GV, BOMON BM
   WHERE GV.MABM = BM.MABM AND EXISTS (SELECT GV2.MAGV
@@ -90,6 +94,7 @@ SELECT HOTEN, TENBM
 
 Câu 6:
 ```SQL
+--6. Cho biết tên đề tài nào mà được tất cả các giáo viên của bộ môn HTTT tham gia.
 SELECT TENDT
 FROM DETAI DT
 WHERE DT.MADT IN(SELECT DT.MADT
@@ -108,6 +113,7 @@ WHERE DT.MADT IN(SELECT DT.MADT
 
 Câu 7:
 ```SQL
+--7. Cho biết tên giáo viên nào đã tham gia tất cả các đề tài của do Trần Trà Hương làm chủ nhiệm.
 SELECT HOTEN
 FROM  GIAOVIEN GV
 WHERE GV.MAGV IN(SELECT GV.MAGV
@@ -126,6 +132,7 @@ WHERE GV.MAGV IN(SELECT GV.MAGV
 
 Câu 8:
 ```SQL
+--8. Cho biết tên đề tài nào mà được tất cả các giáo viên của khoa CNTT tham gia.
 SELECT TENDT
 FROM DETAI DT
 WHERE DT.MADT IN(SELECT DT.MADT
@@ -144,6 +151,7 @@ WHERE DT.MADT IN(SELECT DT.MADT
 
 Câu 9:
 ```SQL
+--9. Cho biết tên đề tài nào mà được tất cả các giáo viên của khoa Sinh Học tham gia.
 SELECT TENDT
 FROM DETAI DT
 WHERE DT.MADT IN(SELECT DT.MADT
@@ -162,6 +170,7 @@ WHERE DT.MADT IN(SELECT DT.MADT
 
 Câu 10:
 ```SQL
+--10. Cho biết mã số, họ tên, tên bộ môn và tên người quản lý chuyên môn của giáo viên tham gia tất cả các đề tài thuộc chủ đề “Nghiên cứu phát triển”.
 SELECT GV.MAGV, GV.HOTEN, BM.TENBM, GV.GVQLCM
 FROM  GIAOVIEN GV
 JOIN  THAMGIADT TG  ON GV.MAGV = TG.MAGV
