@@ -8,6 +8,7 @@ Sau khi tạo bảng (code SQL), ta có kết quả bảng
 Và nhập data, được kết quả. 
 
 <p align="center"> <img src="img/CV.png" width=""> </p>
+<p align="center"> <img src="img/dt.png" width=""> </p>
 <p align="center"> <img src="img/BM.png" width=""> </p>
 <p align="center"> <img src="img/Chude.png" width=""> </p>
 <p align="center"> <img src="img/khoa.png" width=""> </p>
@@ -24,10 +25,22 @@ Và nhập data, được kết quả.
 ### Phần D
 
 Câu 1: 
-
+```SQL
+(select MAGV
+from GIAOVIEN 
+where LUONG > 2000 and HOTEN like N'Nguyễn%')
+union
+(select gv.magv
+from giaovien gv join bomon bm on gv.magv = bm.truongbm
+where year(bm.NGAYNHANCHUC)> 1995 )
+```
 <p align="center"> <img src="img/1.png" width=""> </p>
 
 Câu 2:
+```SQL
+SELECT  gv.HOTEN, bm.* 
+from GIAOVIEN gv left join BOMON bm on gv.MABM = bm.MABM
+```
 <p align="center"> <img src="img/2.png" width=""> </p>
 
 Câu 3:
