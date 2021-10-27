@@ -3,7 +3,7 @@
 ### Phần C
 
 Sau khi tạo bảng ([script](https://github.com/ke666/test_sql/blob/main/tao_bang.sql)), ta có kết quả bảng:
-<p align="center"> <img src="img/luocdo.png" width="450"> </p>
+<p align="center"> <img src="img/luocdo.png" width=""> </p>
 
 Và nhập data, được kết quả. 
 
